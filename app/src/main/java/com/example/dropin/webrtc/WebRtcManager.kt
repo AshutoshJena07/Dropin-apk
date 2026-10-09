@@ -388,8 +388,8 @@ class WebRtcManager(private val context: Context, private val pin: String) {
         try {
             val url = URL(urlString)
             conn = (url.openConnection() as HttpURLConnection).apply {
-                connectTimeout = 8000
-                readTimeout = 8000
+                connectTimeout = 4000
+                readTimeout = 4000
                 requestMethod = "GET"
             }
             if (conn.responseCode == 200) {
@@ -409,8 +409,8 @@ class WebRtcManager(private val context: Context, private val pin: String) {
         try {
             val url = URL("$VERCEL_API?pin=$pin&$query")
             conn = (url.openConnection() as HttpURLConnection).apply {
-                connectTimeout = 8000
-                readTimeout = 8000
+                connectTimeout = 4000
+                readTimeout = 4000
                 requestMethod = "POST"
                 setRequestProperty("Content-Type", "application/json; charset=utf-8")
                 doOutput = true

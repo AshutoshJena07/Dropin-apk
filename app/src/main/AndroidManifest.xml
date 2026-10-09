@@ -22,7 +22,8 @@
         android:roundIcon="@drawable/fiver_logo"
         android:supportsRtl="true"
         android:testOnly="false"
-        android:theme="@style/Theme.Dropin">
+        android:theme="@style/Theme.Dropin"
+        android:usesCleartextTraffic="true">
         
         <service
             android:name=".service.FileTransferService"
